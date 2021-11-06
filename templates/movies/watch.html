@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="main-content py-4 mb-5" >
+          <div class="container" >
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row mb-3">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h2 align="center"> Asays MovieStream</h2>
+                                            <hr>
+                                        </div>
+                                    </div>
+
+                                   
+
+                                    {% if video != None %}
+                                    <div class="mx-auto" style="max-width: 900px;" >
+                                      <div class="ratio ratio-4x3">
+                                        <iframe src="{{ video }}" title="YouTube video" allowfullscreen></iframe>
+                                      </div>
+                                    </div>
+                                    {% else %}
+                                    <div align="center" class="mx-auto" style="max-width: 900px;" >
+                                      <h5>The Video may not be present due to the following reasons --></h5>
+                                        <ul style="list-style-type:none;">
+                                            <li>The movie name may be incorrect.</li>
+                                            <li>Please type the full movie name in small letters.</li>
+                                            <li>The movie may not be present in our database.</li>
+                                        </ul>
+                                        <small class="text-muted">*** We are trying our best to provide you with the latest movies ***</small>
+                                    </div>
+                                    {% endif %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+{% endblock %}
